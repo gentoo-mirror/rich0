@@ -1,0 +1,10 @@
+--- src/utils/SConscript	2013-06-21 20:08:11.136380818 +0200
++++ src/utils/SConscript	2013-06-21 20:09:02.094702462 +0200
+@@ -1,6 +1,8 @@
+ import glob                                                                                   
+ source_list = glob.glob('*.cpp')
++source_list.remove('unzip.cpp')
++source_list.remove('ioapi.cpp')
+ 
+ for x in range(len(source_list)):
+    source_list[x] = 'utils/' + source_list[x]

@@ -1,0 +1,155 @@
+diff --git a/Eternal-Lands-1.9.4/Makefile.linux b/Eternal-Lands-1.9.4/Makefile.linux
+index 0074e14..854a24e 100644
+--- a/Eternal-Lands-1.9.4/Makefile.linux
++++ b/Eternal-Lands-1.9.4/Makefile.linux
+@@ -16,6 +16,55 @@ LDFLAGS=$(shell sdl-config --libs) $(shell xml2-config --libs) -lSDL_net \
+ 	$(foreach FEATURE, $(FEATURES), $($(FEATURE)_LIBS))
+ _LDFLAGS=$(XDIR) -lGL -lpthread -lstdc++
+ 
++CC ?= gcc
++CXX ?= g++
++
++# some options
++DATADIR ?= /usr/share/games/eternal-lands
++
++CPPFLAGS += -DDATA_DIR=\"$(DATADIR)\" \
++	    -DLINUX \
++	    -DELC \
++	    $(foreach FEATURE, $(EL_FEATURES), -D$(FEATURE)) \
++	    -D_7ZIP_ST
++
++ifeq ($(BSD_KERNEL),yes)
++CPPFLAGS += -DBSD
++endif
++
++ifeq ($(DEBUG),yes)
++CPPFLAGS += -DMEMORY_DEBUG
++endif
++
++CFLAGS += $(shell sdl-config --cflags) \
++	  $(shell xml2-config --cflags) \
++	  -fno-strict-aliasing \
++	  $(EXTRA_INCLUDES)
++
++CXXFLAGS += $(shell sdl-config --cflags) \
++	    $(shell xml2-config --cflags) \
++	    -fno-strict-aliasing \
++	    $(EXTRA_INCLUDES)
++
++LIBS += $(shell pkg-config --libs x11) \
++	$(shell sdl-config --libs) \
++	$(shell xml2-config --libs) \
++	$(shell pkg-config --libs SDL_net) \
++	$(shell pkg-config --libs SDL_image) \
++	$(shell pkg-config --libs openal) \
++	$(shell pkg-config --libs freealut) \
++	$(shell pkg-config --libs gl) \
++	$(shell pkg-config --libs glu) \
++	$(shell pkg-config --libs cal3d) \
++	$(shell pkg-config --libs libpng) \
++	$(shell pkg-config --libs vorbis) \
++	$(shell pkg-config --libs vorbisfile) \
++	$(shell pkg-config --libs zlib) \
++	-lm \
++	$(EXTRA_LIBS) \
++	$(foreach FEATURE, $(EL_FEATURES), $($(FEATURE)_LIBS)) \
++	-lstdc++
++
+ # This works on Ubuntu 8.04 (LTS) at least
+ # Install these packages in addition to those required for a standard build
+ # libasound2-dev libaudio-dev libartsc0-dev libesd0-dev libpulse-dev libaa1-dev libgpmg1-dev libdirectfb-dev
+@@ -61,7 +110,7 @@ COBJS=2d_objects.o 3d_objects.o \
+ 	xz/CpuArch.o xz/Delta.o xz/LzFind.o xz/Lzma2Dec.o xz/Lzma2Enc.o	\
+ 	xz/LzmaDec.o xz/LzmaEnc.o xz/Sha256.o xz/Xz.o xz/XzCrc64.o xz/XzDec.o	\
+ 	xz/XzEnc.o	\
+-	$(foreach FEATURE, $(FEATURES), $($(FEATURE)_COBJ))
++	$(foreach FEATURE, $(EL_FEATURES), $($(FEATURE)_COBJ))
+ 	
+ CXXOBJS=achievements.o actor_init.o cal3d_wrapper.o command_queue.o \
+ 	context_menu.o elloggingwrapper.o engine/logging.o exceptions/extendedexception.o \
+@@ -81,7 +130,7 @@ CXXOBJS=achievements.o actor_init.o cal3d_wrapper.o command_queue.o \
+ 	eye_candy/effect_mines.o eye_candy/effect_missile.o \
+ 	eye_candy/orbital_mover.o eye_candy/kepler_orbit.o	\
+ 	eye_candy/effect_staff.o \
+-	$(foreach FEATURE, $(FEATURES), $($(FEATURE)_CXXOBJ))
++	$(foreach FEATURE, $(EL_FEATURES), $($(FEATURE)_CXXOBJ))
+ 
+ OBJS=$(COBJS) $(CXXOBJS)
+ HEADER_DIRS = . books eye_candy io pawn fsaa engine xz
+@@ -90,24 +139,13 @@ HEADER_DIRS = . books eye_candy io pawn fsaa engine xz
+ DEP_FILES=$(foreach OBJ, $(COBJS), .deps/$(OBJ).P) $(foreach OBJ, $(CXXOBJS), .deps/$(OBJ).P)
+ #(shell echo $OBJ |sed s/\.o/\.P/))
+ 
+-EXE=el.x86.linux.bin
+-
+-ifndef CC
+-CC=gcc
+-endif
+-ifndef CXX
+-CXX=g++
+-endif
+-ifndef LINK
+-LINK=gcc
+-endif
++EXE=el
+ 
+ all: $(EXE)
+ 
+ # the compile targets
+ $(EXE): $(OBJS)
+-	@echo "  LINK $(EXE)"
+-	@$(LINK) $(CFLAGS) -o $(EXE) $(OBJS) $(LDFLAGS)
++	$(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) -o $(EXE) $(OBJS) $(LIBS)
+ 
+ #recompile on Makefile or conf change
+ #.depend $(OBJS): Makefile.linux make.conf
+@@ -115,25 +153,19 @@ $(EXE): $(OBJS)
+ DEPS_MAGIC := $(shell mkdir .deps .deps/io .deps/shader .deps/eye_candy .deps/exceptions .deps/xz .deps/xml .deps/fsaa .deps/engine > /dev/null 2>&1 || :)
+ 
+ $(COBJS): %.o: %.c Makefile.linux make.conf
+-	@echo "  CC   $@"
+-	@if $(CC) $(CFLAGS) -MT '$@' -MD -MP -MF '.deps/$@.pp' -c $< -o $@; then \
++	@echo "$(CC) $(CFLAGS) $(CPPFLAGS) -MT '$@' -MD -MP -MF '.deps/$@.pp' -c $< -o $@"
++	@if $(CC) $(CFLAGS) $(CPPFLAGS) -MT '$@' -MD -MP -MF '.deps/$@.pp' -c $< -o $@; then \
+ 		mv ".deps/$@.pp" ".deps/$@.P"; \
+ 	else rm -f ".deps/$@.pp"; exit 1; \
+ 	fi
+ 
+ $(CXXOBJS): %.o: %.cpp Makefile.linux make.conf
+-	@echo "  CXX  $@"
+-	@if $(CXX) $(CXXFLAGS) -MT '$@' -MD -MP -MF '.deps/$@.pp' -c $< -o $@; then \
++	@echo "$(CXX) $(CXXFLAGS) $(CPPFLAGS) -MT '$@' -MD -MP -MF '.deps/$@.pp' -c $< -o $@"
++	@if $(CXX) $(CXXFLAGS) $(CPPFLAGS) -MT '$@' -MD -MP -MF '.deps/$@.pp' -c $< -o $@; then \
+ 		mv ".deps/$@.pp" ".deps/$@.P"; \
+ 	else rm -f ".deps/$@.pp"; exit 1; \
+ 	fi
+ 
+-release:
+-	@$(MAKE) -f Makefile.linux 'CFLAGS=$(_CFLAGS)' 'CXXFLAGS=$(_CXXFLAGS)'
+-
+-static:
+-	@$(MAKE) -f Makefile.linux 'CFLAGS=$(_CFLAGS)' 'CXXFLAGS=$(_CXXFLAGS)' 'LDFLAGS=$(_LDFLAGS)' 'OBJS=$(OBJS) $(STATICLIBS)'
+-
+ clean:
+ 	rm -f $(OBJS) $(EXE) 
+ 
+@@ -154,8 +186,8 @@ gen_git_version:
+ 	@rm -f console.o $(EXE) 
+ 
+ .depend: $(foreach HEADER_DIR, $(HEADER_DIRS), $(wildcard $(HEADER_DIR)/*.h))
+-	$(CC) $(CFLAGS) -MM $(patsubst %.o, %.c, $(COBJS)) >.depend
+-	$(CXX) $(CXXFLAGS) -MM $(patsubst %.o, %.cpp, $(CXXOBJS)) >>.depend
++	$(CC) $(CFLAGS) $(CPPFLAGS) -MM $(patsubst %.o, %.c, $(COBJS)) >.depend
++	$(CXX) $(CXXFLAGS) $(CPPFLAGS) -MM $(patsubst %.o, %.cpp, $(CXXOBJS)) >>.depend
+ 
+ make.conf: make.defaults
+ 	@if (test -f $@ -a '$(UPDATE_CONF)' != 'yes'); \
+@@ -174,7 +206,7 @@ pawn_scripts/features.inc: make.conf
+ 	echo "\t#endinput" >> $@; \
+ 	echo "#endif" >> $@; \
+ 	echo "#define _features_included" >> $@; \
+-	for feature in $(FEATURES); do \
++	for feature in $(EL_FEATURES); do \
+ 		echo "#define $$feature" >> $@; \
+ 	done
+ 

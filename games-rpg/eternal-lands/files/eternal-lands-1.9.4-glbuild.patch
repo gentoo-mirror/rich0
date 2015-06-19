@@ -1,0 +1,31 @@
+diff --git a/Eternal-Lands-1.9.4-orig/gl_init.c b/Eternal-Lands-1.9.4/gl_init.c
+index 8ecbae9..4f80985 100644
+--- a/Eternal-Lands-1.9.4-orig/gl_init.c
++++ b/Eternal-Lands-1.9.4/gl_init.c
+@@ -27,6 +27,8 @@
+ #include "fsaa/fsaa.h"
+ #endif	/* FSAA */
+ 
++#define APIENTRY
++
+ Uint32 flags;
+ 
+ int window_width=640;
+diff --git a/Eternal-Lands-1.9.4-orig/platform.h b/Eternal-Lands-1.9.4/platform.h
+index 531fa84..6b5e9de 100644
+--- a/Eternal-Lands-1.9.4-orig/platform.h
++++ b/Eternal-Lands-1.9.4/platform.h
+@@ -87,11 +87,12 @@
+  #define APIENTRYP *
+ #elif !defined(BSD)
+  #define GL_GLEXT_LEGACY
++ #include <GL/glew.h>
+  #include <GL/gl.h>
+  #include <GL/glu.h>
+  #undef GL_VERSION_1_2
+  #undef GL_VERSION_1_3
+- #include "glext.h"
++ #include <GL/glext.h>
+ #else // BSD
+  #include <GL/gl.h>
+  #include <GL/glu.h>

@@ -1,0 +1,6 @@
+rich0-overlay
+=============
+
+This is a gentoo overlay.  Feel free to make use of it, but I can't promise the long-term stability of anything within.  
+
+This is mostly stuff that I have some personal use for, or bugfixes for packages that I simply can't wait on.
