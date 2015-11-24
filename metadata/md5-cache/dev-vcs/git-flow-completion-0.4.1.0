@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst unpack
+DEPEND=>=dev-vcs/git-1.7.1 dev-vcs/git-flow dev-vcs/git
+DESCRIPTION=Bash and Zsh completion support for git-flow.
+EAPI=3
+HOMEPAGE=https:/github.com/bobthecow/git-flow-completion
+KEYWORDS=~x64-macos
+LICENSE=MIT
+RDEPEND=>=dev-vcs/git-1.7.1 dev-vcs/git-flow
+SLOT=0
+_eclass_exported_funcs=pkg_postinst:- src_unpack:git-2 src_install:-
+_eclasses_=bash-completion-r1	b1fc4d30333bb528c8abb4332bb70ea6	git-2	df00117322129fb906bb0a53c3d6a020	multilib	3972ca401cf7dbb430df9995f5d8d580	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85
+_md5_=3d9a544464b6c751016cdef4828fc037
