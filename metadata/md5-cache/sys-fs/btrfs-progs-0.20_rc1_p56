@@ -9,5 +9,5 @@ RDEPEND=sys-libs/zlib sys-apps/acl sys-fs/e2fsprogs
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~floppym/dist/btrfs-progs-0.20_rc1_p56.tar.gz
 _eclass_exported_funcs=src_compile:- src_install:-
-_eclasses_=multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	c9d9187f4caa4026a0ceddd8dfceb3c1
+_eclasses_=multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	bfd09e8e66991dd5ce9e57610d8d1e6c
 _md5_=bb6cd38823c39f4413da9b18d4410942
