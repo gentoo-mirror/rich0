@@ -32,7 +32,7 @@ RDEPEND="x11-libs/libX11
 	games-rpg/eternal-lands-data"
 
 DEPEND="${RDEPEND}
-	>=app-admin/eselect-opengl-1.0.6-r1
+	>=app-eselect/eselect-opengl-1.0.6-r1
 	app-arch/unzip
 	doc? ( app-doc/doxygen
 		media-gfx/graphviz )"
