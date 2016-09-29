@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst preinst setup unpack
-DEPEND=x11-libs/libX11 x11-libs/libXau x11-libs/libXdmcp x11-libs/libXext virtual/opengl media-libs/libsdl media-libs/sdl-net media-libs/sdl-image media-libs/mesa media-libs/openal media-libs/freealut media-libs/libvorbis dev-libs/libxml2 >=media-libs/cal3d-0.11.0 !=media-libs/cal3d-0.11.0_pre20050823 media-libs/libpng games-rpg/eternal-lands-data >=app-admin/eselect-opengl-1.0.6-r1 app-arch/unzip doc? ( app-doc/doxygen media-gfx/graphviz ) dev-vcs/cvs
+DEPEND=x11-libs/libX11 x11-libs/libXau x11-libs/libXdmcp x11-libs/libXext virtual/opengl media-libs/libsdl media-libs/sdl-net media-libs/sdl-image media-libs/mesa media-libs/openal media-libs/freealut media-libs/libvorbis dev-libs/libxml2 >=media-libs/cal3d-0.11.0 !=media-libs/cal3d-0.11.0_pre20050823 media-libs/libpng games-rpg/eternal-lands-data >=app-eselect/eselect-opengl-1.0.6-r1 app-arch/unzip doc? ( app-doc/doxygen media-gfx/graphviz ) dev-vcs/cvs
 DESCRIPTION=An online MMORPG written in C and SDL
 EAPI=0
 HOMEPAGE=http://www.eternal-lands.com
@@ -11,4 +11,4 @@ SLOT=0
 SRC_URI=mirror://gentoo/eternal-lands.png
 _eclass_exported_funcs=pkg_preinst:games pkg_postinst:- pkg_setup:- src_unpack:- src_compile:- src_install:-
 _eclasses_=base	3fe4f8980633fd7bc69e9887209ba2fe	cvs	e94c89c58918dff87fa3db1e817c25be	eutils	b83a2420b796f7c6eff682679d08fe25	flag-o-matic	8632fcd33a047954f007dee9a137bdcc	games	2cf0d67d765e6358b435ccda30c13ad8	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	6198c04daba0e1307bd844df7d37f423	user	80aaa71614ced86f02ee1a513821dc87
-_md5_=5ffd313766fe0b36cc0d933302254d93
+_md5_=221a3ac69b72db0b4f60cb1384db7d47
