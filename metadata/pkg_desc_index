@@ -7,6 +7,7 @@ games-rpg/eternal-lands 1.9.4 9999: An online MMORPG written in C and SDL
 games-rpg/eternal-lands-data 1.9.4: An online MMORPG written in C and SDL
 media-gfx/dispcalgui 3.0.4.2: Display Calibration and Characterization powered by Argyll CMS
 media-radio/cqrlog 2.1.0: CQRLOG is an advanced ham radio logger based on MySQL database.
+media-radio/flmsg 4.0.3: Fldigi helper for creating radiograms
 net-misc/flexget 1.2.315 1.2.346-r1 9999: Multipurpose automation tool for content like torrents, nzbs, podcasts, comics
 net-p2p/i2p 0.8.11 0.9.3-r1 0.9.4 0.9.7.1 0.9.8.1: I2P is an anonymous network.
 sys-apps/ec2-shim 9999: Files necessary to run a gentoo ec2 instance.
