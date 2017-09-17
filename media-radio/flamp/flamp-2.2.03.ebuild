@@ -1,7 +1,7 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=6
 
 inherit eutils
 
@@ -14,7 +14,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="media-radio/fldigi"
+RDEPEND="media-radio/fldigi
+		 x11-libs/fltk:=
+		 x11-libs/libX11:="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
