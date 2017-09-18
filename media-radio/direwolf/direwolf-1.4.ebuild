@@ -29,7 +29,10 @@ src_prepare() {
 src_install() {
 	dodir /usr
 	dodir /usr/bin
+	dodir /var/log/direwolf
 	emake DESTDIR="${D}" install
+	insinto /etc/direwolf/
+	doins direwolf.conf
 	einstalldocs
 	systemd_dounit "${FILESDIR}"/direwolf.service
 	systemd_dounit "${FILESDIR}"/direwolf-kiss.service
