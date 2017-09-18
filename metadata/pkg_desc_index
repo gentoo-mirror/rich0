@@ -7,6 +7,7 @@ games-rpg/eternal-lands 1.9.4 9999: An online MMORPG written in C and SDL
 games-rpg/eternal-lands-data 1.9.4: An online MMORPG written in C and SDL
 media-gfx/dispcalgui 3.0.4.2: Display Calibration and Characterization powered by Argyll CMS
 media-radio/cqrlog 2.1.0: CQRLOG is an advanced ham radio logger based on MySQL database.
+media-radio/direwolf 1.4: Decoded Information from Radio Emissions for Windows Or Linux Fans
 media-radio/flamp 2.2.03: Fldigi helper for transferring files
 media-radio/flmsg 4.0.3: Fldigi helper for creating radiograms
 media-radio/tqsl 2.3.1: ARRL Logbook of the World
