@@ -47,5 +47,5 @@ src_install() {
 	cmake-utils_src_install
 	rm "${D}"/usr/bin/rigctl{,d}-wsjtx || die
 	rm "${D}"/usr/share/man/man1/rigctl{,d}-wsjtx.1.gz || die
-#	rm "${D}"/usr/share/doc/${PF}/{copyright,changelog.Debian.gz,INSTALL,COPYING} || die
+	rm -r "${D}"/usr/share/doc/WSJT-X || die
 }
