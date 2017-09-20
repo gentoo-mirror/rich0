@@ -11,6 +11,7 @@ media-radio/direwolf 1.4: Decoded Information from Radio Emissions for Windows O
 media-radio/flamp 2.2.03: Fldigi helper for transferring files
 media-radio/flmsg 4.0.3: Fldigi helper for creating radiograms
 media-radio/tqsl 2.3.1: ARRL Logbook of the World
+media-radio/wsjtx 1.7.0 1.8.0_rc2: Weak signal ham radio communication
 net-misc/flexget 1.2.315 1.2.346-r1 9999: Multipurpose automation tool for content like torrents, nzbs, podcasts, comics
 net-p2p/i2p 0.8.11 0.9.3-r1 0.9.4 0.9.7.1 0.9.8.1: I2P is an anonymous network.
 sys-apps/ec2-shim 9999: Files necessary to run a gentoo ec2 instance.
