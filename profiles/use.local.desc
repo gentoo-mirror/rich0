@@ -10,6 +10,3 @@ app-misc/lirc:inputlirc - Build inputlirc
 app-misc/lirc:irman - Build libirman required by Irman
 app-misc/lirc:transmitter - Add transmitter support to some lirc-drivers (e.g. serial)
 sys-fs/btrfs-progs:debug-utils - Build additional utils for debugging
-sys-power/cpufreqd:nforce2 - Enable support for nforce2 voltage settings plug-in
-sys-power/cpufreqd:nvidia - Enable nvidia overclocking (media-video/nvclock) plug-in
-sys-power/cpufreqd:pmu - Enable Power Management Unit plug-in
