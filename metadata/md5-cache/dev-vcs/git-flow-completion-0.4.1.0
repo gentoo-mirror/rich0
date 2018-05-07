@@ -7,5 +7,5 @@ KEYWORDS=~x64-macos
 LICENSE=MIT
 RDEPEND=>=dev-vcs/git-1.7.1 dev-vcs/git-flow
 SLOT=0
-_eclasses_=bash-completion-r1	8e447753aaf658afa609fbf961d80ab7	git-2	45ff482316b52b3f96ff6b7309b77f03	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	fa02994d0beba88681127d93da4411ec
+_eclasses_=bash-completion-r1	7e76462890d7d19cad453151876b0ecf	git-2	45ff482316b52b3f96ff6b7309b77f03	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	fa02994d0beba88681127d93da4411ec
 _md5_=3d9a544464b6c751016cdef4828fc037
