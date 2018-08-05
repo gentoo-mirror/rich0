@@ -5,3 +5,4 @@ sys-fs/btrfs-progs 0.19-r3 0.19.11 3.12-r1 3.14.2: Btrfs filesystem utilities
 sys-fs/zfs 0.6.5.11-r2 0.7.8: Userland utilities for ZFS Linux kernel module
 sys-fs/zfs-kmod 0.6.5.11 0.7.8: Linux ZFS kernel module for sys-fs/zfs
 sys-kernel/spl 0.6.5.11 0.7.8: The Solaris Porting Layer provides many of the Solaris kernel APIs
+x11-libs/wxGTK 3.1.1-r301: GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit

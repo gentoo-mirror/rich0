@@ -14,3 +14,5 @@ sys-fs/zfs:kernel-builtin - Disable dependency on sys-fs/zfs-kmod under the assu
 sys-fs/zfs:rootfs - Enable dependencies required for booting off a pool containing a rootfs
 sys-fs/zfs:test-suite - Install regression test suite
 sys-fs/zfs-kmod:rootfs - Install zfs-shutdown script to support exporting a pool containing rootfs
+x11-libs/wxGTK:gstreamer - Enable the wxMediaCtrl class for playing audio and video through gstreamer.
+x11-libs/wxGTK:sdl - Use Simple Directmedia Layer (media-libs/libsdl) for audio.
