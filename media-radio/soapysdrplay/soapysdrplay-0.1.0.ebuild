@@ -21,5 +21,6 @@ fi
 LICENSE="MIT"
 SLOT="0"
 
-RDEPEND="net-wireless/soapysdr"
+RDEPEND="net-wireless/soapysdr
+		 media-radio/sdrplay-api"
 DEPEND="${RDEPEND}"
