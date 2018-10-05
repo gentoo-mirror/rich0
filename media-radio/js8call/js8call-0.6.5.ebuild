@@ -35,6 +35,11 @@ DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/widefido-wsjtx-10310d18cfc1/
 
+src_prepare() {
+	eapply "${FILESDIR}/${PV}-makefile-removesymlink.patch"
+	eapply_user
+}
+
 src_configure() {
 	local mycmakeargs=(
 		-DWSJT_GENERATE_DOCS="$(usex doc)"

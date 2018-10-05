@@ -1,0 +1,21 @@
+diff --git CMakeLists.txt.orig CMakeLists.txt
+index fb71e60..bd3b443 100644
+--- a/CMakeLists.txt
++++ a/CMakeLists.txt
+@@ -1534,12 +1534,12 @@ if (NOT WIN32 AND NOT APPLE)
+     #COMPONENT runtime
+     )
+ 
+-    execute_process(COMMAND ln -s /opt/ft8call/bin/ft8call lft8call)
++#    execute_process(COMMAND ln -s /opt/ft8call/bin/ft8call lft8call)
+ 
+-    install(FILES
+-        ${CMAKE_BINARY_DIR}/lft8call DESTINATION /usr/bin/ RENAME ft8call
++#    install(FILES
++#        ${CMAKE_BINARY_DIR}/lft8call DESTINATION /usr/bin/ RENAME ft8call
+         #COMPONENT runtime
+-    )
++	#    )
+ endif (NOT WIN32 AND NOT APPLE)
+ 
+ 
