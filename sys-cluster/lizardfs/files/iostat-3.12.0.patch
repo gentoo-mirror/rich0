@@ -1,0 +1,10 @@
+--- a/src/chunkserver/iostat.h	2019-02-13 15:54:39.451985990 -0500
++++ a/src/chunkserver/iostat.h	2019-02-13 15:55:05.523780330 -0500
+@@ -28,6 +28,7 @@
+ #include <algorithm>
+ #include <unordered_map>
+ #include <vector>
++#include <sys/sysmacros.h>
+ 
+ #include <sys/stat.h>
+ #include <sys/types.h>
