@@ -1,0 +1,31 @@
+diff --git a/lizardfs-3.12.0/cmake/Libraries.cmake.orig b/lizardfs-3.12.0/cmake/Libraries.cmake
+index 1f951e5..4c2d129 100644
+--- a/cmake/Libraries.cmake.orig
++++ b/cmake/Libraries.cmake
+@@ -1,16 +1,16 @@
+ include(DownloadExternal)
+ 
+ # Download GoogleTest
+-if(ENABLE_TESTS)
+-  download_external(GTEST "googletest-release-1.7.0"
+-                    "https://github.com/google/googletest/archive/release-1.7.0.zip"
+-                    "ef5e700c8a0f3ee123e2e0209b8b4961")
+-endif()
+-
+-download_external(SPDLOG "spdlog-0.14.0"
+-                  "https://github.com/gabime/spdlog/archive/v0.14.0.zip"
+-                  "f213d83c466aa7044a132e2488d71b11"
+-                  "spdlog-1")
++#if(ENABLE_TESTS)
++#  download_external(GTEST "googletest-release-1.7.0"
++#                    "https://github.com/google/googletest/archive/release-1.7.0.zip"
++#                    "ef5e700c8a0f3ee123e2e0209b8b4961")
++#endif()
++
++#download_external(SPDLOG "spdlog-0.14.0"
++#                  "https://github.com/gabime/spdlog/archive/v0.14.0.zip"
++#                  "f213d83c466aa7044a132e2488d71b11"
++#                  "spdlog-1")
+ 
+ # Find standard libraries
+ find_package(Socket REQUIRED)
