@@ -10,7 +10,7 @@ S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="LizardFS is an Open Source Distributed File System licenced under GPLv3."
 HOMEPAGE="http://lizardfs.org"
-SRC_URI="https://github.com/lizardfs/lizardfs/archive/v${PV}.tar.gz -> ${P}.tar.gz https://github.com/gabime/spdlog/archive/v0.14.0.zip -> ${P}-spdlog.zip"
+SRC_URI="https://github.com/lizardfs/lizardfs/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 #EGIT_REPO_URI="https://github.com/lizardfs/lizardfs.git"
 #EGIT_COMMIT="If316525daf78165494416508cb81b5448f3b760d"
@@ -25,11 +25,10 @@ RDEPEND="
 	!sys-cluster/moosefs
 	app-text/asciidoc
 	dev-libs/judy
-	dev-libs/spdlog
 	fuse? ( >=sys-fs/fuse-2.6:= )"
 DEPEND="${RDEPEND}"
 
-PATCHES=( "${FILESDIR}"/iostat-${PV}.patch "${FILESDIR}"/download-${PV}.patch )
+PATCHES=( "${FILESDIR}"/iostat-${PV}.patch )
 
 pkg_setup() {
 	enewgroup mfs
