@@ -1,5 +1,6 @@
 app-misc/lirc 0.9.0-r5 0.9.3a: decode and send infra-red signals of many commonly used remote controls
 games-emulation/fceux 2.2.1.1: A portable Famicom/NES emulator, an evolution of the original FCE Ultra
+net-misc/youtube-dl 2019.07.16: Download videos from YouTube.com (and more sites...)
 sys-apps/ec2-shim 9999: Files necessary to run a gentoo ec2 instance.
 sys-fs/btrfs-progs 0.19-r3 0.19.11 3.12-r1 3.14.2: Btrfs filesystem utilities
 sys-fs/zfs 0.6.5.11-r2 0.7.8: Userland utilities for ZFS Linux kernel module
