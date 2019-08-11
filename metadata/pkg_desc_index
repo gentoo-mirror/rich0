@@ -1,9 +1,24 @@
+app-backup/snapper 0.2.3-r1 9999: Command-line program for btrfs and ext4 snapshot management
 app-misc/lirc 0.9.0-r5 0.9.3a: decode and send infra-red signals of many commonly used remote controls
+dev-vcs/git-flow 0.4.1: Git extensions for Vincent Driessen branching.
+dev-vcs/git-flow-completion 0.4.1.0: Bash and Zsh completion support for git-flow.
 games-emulation/fceux 2.2.1.1: A portable Famicom/NES emulator, an evolution of the original FCE Ultra
-net-misc/youtube-dl 2019.07.16: Download videos from YouTube.com (and more sites...)
+media-gfx/dispcalgui 3.0.4.2: Display Calibration and Characterization powered by Argyll CMS
+media-radio/cubicsdr 0.2.4: Cross-Platform Software-Defined Radio Application
+media-radio/sdrplay-api 2.13.1: SDRPlay Proprietary APIs
+media-radio/soapysdrplay 0.1.0 9999: SoapySDR SDRPlay Support Module
+media-radio/wsjtx 1.7.0 1.8.0_rc2: Weak signal ham radio communication
+net-misc/flexget 1.2.315 1.2.346-r1 9999: Multipurpose automation tool for content like torrents, nzbs, podcasts, comics
+net-misc/youtube-dl 2019.07.16 2019.07.27 2019.07.30 99999999: Download videos from YouTube.com (and more sites...)
 sys-apps/ec2-shim 9999: Files necessary to run a gentoo ec2 instance.
-sys-fs/btrfs-progs 0.19-r3 0.19.11 3.12-r1 3.14.2: Btrfs filesystem utilities
-sys-fs/zfs 0.6.5.11-r2 0.7.8: Userland utilities for ZFS Linux kernel module
-sys-fs/zfs-kmod 0.6.5.11 0.7.8: Linux ZFS kernel module for sys-fs/zfs
-sys-kernel/spl 0.6.5.11 0.7.8: The Solaris Porting Layer provides many of the Solaris kernel APIs
+sys-cluster/lizardfs 3.12.0: LizardFS is an Open Source Distributed File System licenced under GPLv3.
+sys-fs/btrfs-progs 0.19-r3 0.19.11 0.20_rc1 0.20_rc1_p56 0.20_rc1_p358 3.12 3.12-r1 3.12-r2 3.14.2 3.16 3.16.1 3.16.2 3.17 3.17.1 9999: Btrfs filesystem utilities
+sys-fs/zfs 0.6.5.11-r2 0.7.8 0.7.9999 9999: Userland utilities for ZFS Linux kernel module
+sys-fs/zfs-auto-snapshot 9999-r1: Automatic snapshots for ZFS on Linux
+sys-fs/zfs-kmod 0.6.5.11 0.7.8 0.7.9999 9999: Linux ZFS kernel module for sys-fs/zfs
+sys-kernel/spl 0.6.5.11 0.7.8 0.7.9999 9999: The Solaris Porting Layer provides many of the Solaris kernel APIs
+www-apps/mythweb 0.26.0 0.27 0.27.1 0.27.4: PHP scripts intended to manage MythTV from a web browser
+x11-base/xorg-server 9999: X.Org X servers
+x11-drivers/xf86-video-ati 9999: ATI video driver
+x11-drivers/xf86-video-omapfb 0.1.1.1_p1: X.org driver for TI OMAP framebuffers
 x11-libs/wxGTK 3.1.1-r301: GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit
