@@ -9,7 +9,7 @@ MY_P="lizardfs-${PV}"
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="LizardFS is an Open Source Distributed File System licenced under GPLv3."
-HOMEPAGE="http://lizardfs.org"
+HOMEPAGE="https://lizardfs.org"
 SRC_URI="https://github.com/lizardfs/lizardfs/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 #EGIT_REPO_URI="https://github.com/lizardfs/lizardfs.git"
@@ -25,7 +25,7 @@ RDEPEND="
 	!sys-cluster/moosefs
 	app-text/asciidoc
 	dev-libs/judy
-	fuse? ( >=sys-fs/fuse-2.6:= )"
+	fuse? ( >=sys-fs/fuse-2.6:0= )"
 DEPEND="${RDEPEND}
 		dev-libs/boost"
 
