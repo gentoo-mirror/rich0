@@ -16,7 +16,6 @@ app-misc/lirc:iguanair - Build libiguanair required by iguanaIR
 app-misc/lirc:inputlirc - Build inputlirc
 app-misc/lirc:irman - Build libirman required by Irman
 app-misc/lirc:transmitter - Add transmitter support to some lirc-drivers (e.g. serial)
-net-misc/flexget:transmission - Support comminucation with net-p2p/transmission
 sys-cluster/lizardfs:cgi - Install CGI server and scripts.
 sys-cluster/lizardfs:fuse - Install the mfsmount utility.
 sys-fs/btrfs-progs:debug-utils - Build additional utils for debugging
