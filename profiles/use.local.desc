@@ -9,13 +9,6 @@ app-backup/snapper:btrfs - Include Btrfs support sys-fs/btrfs-progs
 app-backup/snapper:ext4 - Include Ext4 support sys-fs/e2fsprogs
 app-backup/snapper:lvm - Enable LVM thinprovisioned snapshots support sys-fs/lvm2
 app-backup/snapper:xattr - Add support for getting and setting POSIX extended attributes, through sys-apps/attr.
-app-misc/lirc:audio - Build alsa-lib and portaudio required for some receivers
-app-misc/lirc:ftdi - Build libftdi required by FTDI driver
-app-misc/lirc:hardware-carrier - The transmitter device generates its clock signal in hardware
-app-misc/lirc:iguanair - Build libiguanair required by iguanaIR
-app-misc/lirc:inputlirc - Build inputlirc
-app-misc/lirc:irman - Build libirman required by Irman
-app-misc/lirc:transmitter - Add transmitter support to some lirc-drivers (e.g. serial)
 sys-cluster/lizardfs:cgi - Install CGI server and scripts.
 sys-cluster/lizardfs:fuse - Install the mfsmount utility.
 sys-fs/btrfs-progs:debug-utils - Build additional utils for debugging
