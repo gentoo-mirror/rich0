@@ -1,12 +1,8 @@
-app-backup/snapper 0.2.3-r1 9999: Command-line program for btrfs and ext4 snapshot management
 games-emulation/fceux 2.2.1.1: A portable Famicom/NES emulator, an evolution of the original FCE Ultra
 media-radio/cubicsdr 0.2.4: Cross-Platform Software-Defined Radio Application
 media-radio/sdrplay-api 2.13.1: SDRPlay Proprietary APIs
 media-radio/soapysdrplay 0.1.0 9999: SoapySDR SDRPlay Support Module
-media-radio/wsjtx 1.7.0 1.8.0_rc2: Weak signal ham radio communication
 net-misc/youtube-dl 2019.07.16 2019.07.27 2019.07.30 99999999: Download videos from YouTube.com (and more sites...)
 sys-apps/ec2-shim 9999: Files necessary to run a gentoo ec2 instance.
 sys-cluster/lizardfs 3.12.0-r2: LizardFS is an Open Source Distributed File System licenced under GPLv3.
-sys-fs/btrfs-progs 0.19-r3 0.19.11 0.20_rc1 0.20_rc1_p56 0.20_rc1_p358 3.12 3.12-r1 3.12-r2 3.14.2 3.16 3.16.1 3.16.2 3.17 3.17.1 9999: Btrfs filesystem utilities
-www-apps/mythweb 0.26.0 0.27 0.27.1 0.27.4: PHP scripts intended to manage MythTV from a web browser
 x11-libs/wxGTK 3.1.1-r301: GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit

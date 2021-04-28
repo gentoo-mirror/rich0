@@ -5,13 +5,7 @@
 app-backup/dar:dar32 - Enables --enable-mode=32 option, which replace infinite by 32 bit integers
 app-backup/dar:dar64 - Enables --enable-mode=64 option, which replace infinite by 64 bit integers
 app-backup/dar:gcrypt - Enables strong encryption support
-app-backup/snapper:btrfs - Include Btrfs support sys-fs/btrfs-progs
-app-backup/snapper:ext4 - Include Ext4 support sys-fs/e2fsprogs
-app-backup/snapper:lvm - Enable LVM thinprovisioned snapshots support sys-fs/lvm2
-app-backup/snapper:xattr - Add support for getting and setting POSIX extended attributes, through sys-apps/attr.
 sys-cluster/lizardfs:cgi - Install CGI server and scripts.
 sys-cluster/lizardfs:fuse - Install the mfsmount utility.
-sys-fs/btrfs-progs:debug-utils - Build additional utils for debugging
-sys-fs/zfs-kmod:rootfs - Install zfs-shutdown script to support exporting a pool containing rootfs
 x11-libs/wxGTK:gstreamer - Enable the wxMediaCtrl class for playing audio and video through gstreamer.
 x11-libs/wxGTK:sdl - Use Simple Directmedia Layer (media-libs/libsdl) for audio.
