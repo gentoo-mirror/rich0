@@ -7,3 +7,5 @@ www-apps
 sys-apps
 sys-fs
 sys-kernel
+acct-group
+acct-user

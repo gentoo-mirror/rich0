@@ -1,6 +1,5 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
 EAPI=5
 
@@ -27,9 +26,7 @@ EGIT_REPO_URI="https://github.com/rich0/gentoo-ec2-shim.git"
 # to keep it tidy.
 #S=${WORKDIR}/${P}
 
-
 src_install() {
-  cd "${S}/image/"
-  cp -R "." "${D}/" || die "Install failed!"
+	cd "${S}/image/"
+	cp -R "." "${D}/" || die "Install failed!"
 }
-
