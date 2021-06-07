@@ -27,6 +27,7 @@ RDEPEND="
 	!sys-cluster/moosefs
 	app-text/asciidoc
 	dev-libs/judy
+	sys-apps/util-linux
 	fuse? ( >=sys-fs/fuse-2.6:0= )"
 DEPEND="${RDEPEND}
 		dev-libs/boost"
@@ -43,7 +44,7 @@ src_install() {
 	dolib.so "../${MY_P}_build/src/mount/fuse/libmount_fuse.so"
 	dolib.so "../${MY_P}_build/src/common/libmfscommon.so"
 	dolib.so "../${MY_P}_build/src/admin/liblizardfs-admin-lib.so"
-	dolib.so "../${MY_P}_build/src/mount/libmount.so"
+#	dolib.so "../${MY_P}_build/src/mount/libmount.so"
 	dolib.so "../${MY_P}_build/src/chunkserver/libchunkserver.so"
 	dolib.so "../${MY_P}_build/src/master/libmaster.so"
 	dolib.so "../${MY_P}_build/src/metalogger/libmetalogger.so"
