@@ -35,22 +35,11 @@ DEPEND="${RDEPEND}
 PATCHES=( "${FILESDIR}"/iostat-${PV}.patch )
 
 pkg_setup() {
-	mycmakeargs=(-DCMAKE_BUILD_TYPE=Release -DENABLE_TESTS=NO -DCMAKE_INSTALL_PREFIX=/ -DENABLE_DEBIAN_PATHS=YES -DCMAKE_BUILD_WITH_INSTALL_RPATH=true)
+	mycmakeargs=(-DCMAKE_BUILD_TYPE=Release -DENABLE_TESTS=NO -DCMAKE_INSTALL_PREFIX=/ -DENABLE_DEBIAN_PATHS=YES -DBUILD_SHARED_LIBS=OFF)
 }
 
 src_install() {
 	cmake_src_install
-
-	dolib.so "../${MY_P}_build/src/mount/fuse/libmount_fuse.so"
-	dolib.so "../${MY_P}_build/src/common/libmfscommon.so"
-	dolib.so "../${MY_P}_build/src/admin/liblizardfs-admin-lib.so"
-#	dolib.so "../${MY_P}_build/src/mount/libmount.so"
-	dolib.so "../${MY_P}_build/src/chunkserver/libchunkserver.so"
-	dolib.so "../${MY_P}_build/src/master/libmaster.so"
-	dolib.so "../${MY_P}_build/src/metalogger/libmetalogger.so"
-	dolib.so "../${MY_P}_build/src/metarestore/libmetarestore.so"
-	dolib.so "../${MY_P}_build/src/protocol/liblzfsprotocol.so"
-	dolib.so "../${MY_P}_build/external/libcrcutil.so"
 
 	diropts -m0750 -o mfs -g mfs
 	dodir "/var/lib/mfs"
