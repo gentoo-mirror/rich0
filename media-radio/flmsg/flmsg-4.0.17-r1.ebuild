@@ -5,7 +5,8 @@ EAPI=7
 
 DESCRIPTION="Fldigi helper for creating radiograms"
 HOMEPAGE="http://www.w1hkj.com"
-SRC_URI="mirror://sourceforge/fldigi/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/fldigi/${P}.tar.gz
+		https://dev.gentoo.org/~rich0/distfiles/flmsg-4.0.17-patches.tbz2"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -21,6 +22,6 @@ DEPEND="${RDEPEND}
 DOCS=( AUTHORS ChangeLog INSTALL README )
 
 PATCHES=(
-	"${FILESDIR}/${P}-0001-streampos-is-in-the-standard-library-and-access-from.patch"
-	"${FILESDIR}/${P}-0002-Minimal-but-extensive-update-to-remove-namespace-std.patch"
+	"${WORKDIR}/${P}-0001-streampos-is-in-the-standard-library-and-access-from.patch"
+	"${WORKDIR}/${P}-0002-Minimal-but-extensive-update-to-remove-namespace-std.patch"
 )
