@@ -1,4 +1,5 @@
 acct-group/mfs 0: Group for Lizardfs
 acct-user/mfs 0: User for LizardFS
+media-radio/flmsg 4.0.17 4.0.17-r1: Fldigi helper for creating radiograms
 sys-apps/ec2-shim 9999: Files necessary to run a gentoo ec2 instance.
 sys-cluster/lizardfs 3.12.0-r2 3.12.0-r3 3.12.0-r4: LizardFS is an Open Source Distributed File System licenced under GPLv3.
