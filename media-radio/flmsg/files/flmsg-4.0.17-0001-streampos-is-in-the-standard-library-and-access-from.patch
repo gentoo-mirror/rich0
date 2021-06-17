@@ -1,0 +1,26 @@
+From ba48b8d9ffe9bf3cd76d2f84c61d9b666f190a10 Mon Sep 17 00:00:00 2001
+From: Richard Shaw <hobbes1069@gmail.com>
+Date: Wed, 7 Oct 2020 06:46:43 -0500
+Subject: [PATCH 1/2] streampos is in the standard library and access from
+ ostringstream is depreciated.
+
+---
+ src/flmsg.cxx | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/flmsg.cxx b/src/flmsg.cxx
+index 27d099c..4e86ddf 100644
+--- a/src/flmsg.cxx
++++ b/src/flmsg.cxx
+@@ -2845,7 +2845,7 @@ void rotate_log(std::string filename)
+ {
+ 	const int n = 5; // rename existing log files to keep up to 5 old versions
+ 	ostringstream oldfn, newfn;
+-	ostringstream::streampos p;
++	std::streampos p;
+ 
+ 	oldfn << filename << '.';
+ 	newfn << filename << '.';
+-- 
+2.31.1
+
