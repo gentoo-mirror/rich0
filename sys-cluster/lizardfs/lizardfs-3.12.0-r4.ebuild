@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit eutils autotools cmake
+inherit cmake
 
 MY_P="lizardfs-${PV}"
 S="${WORKDIR}/${MY_P}"
