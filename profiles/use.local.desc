@@ -5,3 +5,11 @@
 media-radio/fldigi:hamlib - Enables support by the Hamlib amateur radio rig control library to get/set frequency and mode of the ham radio in use
 sys-cluster/lizardfs:cgi - Install CGI server and scripts.
 sys-cluster/lizardfs:fuse - Install the mfsmount utility.
+sys-cluster/moosefs:cgi - Install CGI server and scripts.
+sys-cluster/moosefs:chunkserver - Install the chunkserver capability.
+sys-cluster/moosefs:cli - Install CLI admin utilities.
+sys-cluster/moosefs:client - Install the mfsmount utility.
+sys-cluster/moosefs:master - Install the master server.
+sys-cluster/moosefs:metalogger - Install the metadata backup logger.
+sys-cluster/moosefs:netdump - Need to document.
+sys-cluster/moosefs:supervisor - Need to document.
