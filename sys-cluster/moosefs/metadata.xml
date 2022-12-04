@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>rich0@gentoo.org</email>
+		<name>Richard Freeman</name>
+	</maintainer>
+	<longdescription>MooseFS is a fault tolerant, network distributed file system.
+	It spreads data over several physical servers which are visible to the user as one resource.
+	For standard file operations MooseFS acts as other Unix-alike file systems
+	</longdescription>
+	<use>
+		<flag name="cgi">Install CGI server and scripts.</flag>
+		<flag name="client">Install the mfsmount utility.</flag>
+		<flag name="chunkserver">Install the chunkserver capability.</flag>
+		<flag name="cli">Install CLI admin utilities.</flag>
+		<flag name="master">Install the master server.</flag>
+		<flag name="metalogger">Install the metadata backup logger.</flag>
+		<flag name="netdump">Need to document.</flag>
+		<flag name="supervisor">Need to document.</flag>
+	</use>
+</pkgmetadata>
