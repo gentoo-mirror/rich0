@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure
-DEPEND=acct-group/mfs acct-user/mfs !sys-cluster/lizardfs app-text/asciidoc dev-libs/judy sys-apps/util-linux client? ( >=sys-fs/fuse-2.6:0= ) cgi? ( python_targets_python3_10? ( >=dev-lang/python-3.10.9-r1:3.10 ) python_targets_python3_11? ( >=dev-lang/python-3.11.1-r1:3.11 ) ) dev-libs/boost
+DEPEND=acct-group/mfs acct-user/mfs !sys-cluster/lizardfs app-text/asciidoc dev-libs/judy sys-apps/util-linux client? ( >=sys-fs/fuse-2.6:0= ) cgi? ( python_targets_python3_10? ( >=dev-lang/python-3.10.11:3.10 ) python_targets_python3_11? ( >=dev-lang/python-3.11.3:3.11 ) ) dev-libs/boost
 DESCRIPTION=MooseFS is an Open Source Distributed File System licenced under GPLv2.
 EAPI=8
 HOMEPAGE=https://moosefs.com
@@ -7,9 +7,9 @@ INHERIT=python-r1
 IUSE=cgi chunkserver cli +client master metalogger netdump static-libs supervisor python_targets_python3_10 python_targets_python3_11
 KEYWORDS=~amd64
 LICENSE=GPL-2
-RDEPEND=acct-group/mfs acct-user/mfs !sys-cluster/lizardfs app-text/asciidoc dev-libs/judy sys-apps/util-linux client? ( >=sys-fs/fuse-2.6:0= ) cgi? ( python_targets_python3_10? ( >=dev-lang/python-3.10.9-r1:3.10 ) python_targets_python3_11? ( >=dev-lang/python-3.11.1-r1:3.11 ) )
+RDEPEND=acct-group/mfs acct-user/mfs !sys-cluster/lizardfs app-text/asciidoc dev-libs/judy sys-apps/util-linux client? ( >=sys-fs/fuse-2.6:0= ) cgi? ( python_targets_python3_10? ( >=dev-lang/python-3.10.11:3.10 ) python_targets_python3_11? ( >=dev-lang/python-3.11.3:3.11 ) )
 REQUIRED_USE=|| ( python_targets_python3_10 python_targets_python3_11 )
 SLOT=0
 SRC_URI=https://github.com/moosefs/moosefs/archive/v3.0.116.tar.gz -> moosefs-3.0.116.tar.gz
-_eclasses_=out-of-source-utils	1a9007554652a6e627edbccb3c25a439	multibuild	bddcb51b74f4a76724ff7cf8e7388869	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	104e1332efb829e2f7cbf89307a474f1	python-utils-r1	d676fb844e9408f4290d20bc7312f8bb	python-r1	3c6cd0f418ba702c186a9865b85e704d
+_eclasses_=out-of-source-utils	1a9007554652a6e627edbccb3c25a439	multibuild	bddcb51b74f4a76724ff7cf8e7388869	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	104e1332efb829e2f7cbf89307a474f1	python-utils-r1	ba15b8b81f30ca448294d759a9f7902c	python-r1	3c6cd0f418ba702c186a9865b85e704d
 _md5_=8b5973500e8b753fa7ae33ad97cc8091
