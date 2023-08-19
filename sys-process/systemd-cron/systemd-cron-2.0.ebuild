@@ -26,7 +26,7 @@ RDEPEND=">=sys-apps/systemd-253
 	acct-group/_cron-failure"
 
 DEPEND="sys-process/cronbase
-	test? ( sys-apps/man-db )"
+	test? ( sys-apps/man-db || ( dev-util/shellcheck dev-util/shellcheck-bin ) )"
 
 pkg_pretend() {
 	if use runparts && ! [ -x /usr/bin/run-parts ] ; then
