@@ -1,6 +1,6 @@
 BDEPEND=dev-util/pkgconf virtual/pkgconfig
 DEFINED_PHASES=configure install postinst prepare pretend
-DEPEND=sys-process/cronbase test? ( sys-apps/man-db )
+DEPEND=sys-process/cronbase test? ( sys-apps/man-db || ( dev-util/shellcheck dev-util/shellcheck-bin ) )
 DESCRIPTION=systemd units to create timers for cron directories and crontab
 EAPI=8
 HOMEPAGE=https://github.com/systemd-cron/systemd-cron/
@@ -13,4 +13,4 @@ RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://github.com/systemd-cron/systemd-cron/archive/v2.0.tar.gz -> systemd-cron-2.0.tar.gz
 _eclasses_=toolchain-funcs	862d337d98edb576796827be2c6b11ca	multilib	c19072c3cd7ac5cb21de013f7e9832e0	systemd	5f4bb0758df2e483babf68cd517078ca
-_md5_=71e5728fc4ff7bb264685d5be08ca0c3
+_md5_=1010d5f0becd5e8446dfe26350ce65fd
