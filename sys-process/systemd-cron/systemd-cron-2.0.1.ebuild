@@ -12,9 +12,12 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~ia64 ~ppc ~ppc64 ~riscv ~sparc ~x86"
 IUSE="cron-boot etc-crontab-systemd minutely +runparts setgid test yearly"
-RESTRICT="!test? ( test )"
+#RESTRICT="!test? ( test )"
 
-BDEPEND="dev-util/pkgconf"
+# Tests currently non-functional due to use of unshare
+RESTRICT="test"
+
+BDEPEND="virtual/pkgconf"
 
 RDEPEND=">=sys-apps/systemd-253
 	dev-libs/openssl
