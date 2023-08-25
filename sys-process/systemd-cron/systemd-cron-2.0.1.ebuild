@@ -17,7 +17,7 @@ IUSE="cron-boot etc-crontab-systemd minutely +runparts setgid test yearly"
 # Tests currently non-functional due to use of unshare
 RESTRICT="test"
 
-BDEPEND="virtual/pkgconf"
+BDEPEND="virtual/pkgconfig"
 
 RDEPEND=">=sys-apps/systemd-253
 	dev-libs/openssl
