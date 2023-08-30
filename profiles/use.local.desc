@@ -2,7 +2,6 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
-app-backup/duplicity:s3 - Support for backing up to the Amazon S3 system
 media-radio/fldigi:hamlib - Enables support by the Hamlib amateur radio rig control library to get/set frequency and mode of the ham radio in use
 sys-cluster/lizardfs:cgi - Install CGI server and scripts.
 sys-cluster/lizardfs:fuse - Install the mfsmount utility.
