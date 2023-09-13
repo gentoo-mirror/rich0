@@ -3,4 +3,3 @@ acct-user/mfs 0: User for LizardFS
 media-radio/fldigi 4.1.18: Sound card based multimode software modem for Amateur Radio use
 sys-cluster/lizardfs 3.12.0-r4: LizardFS is an Open Source Distributed File System licenced under GPLv3.
 sys-cluster/moosefs 3.0.116: MooseFS is an Open Source Distributed File System licenced under GPLv2.
-sys-process/systemd-cron 2.0.1: systemd units to create timers for cron directories and crontab

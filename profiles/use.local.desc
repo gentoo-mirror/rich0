@@ -13,9 +13,3 @@ sys-cluster/moosefs:master - Install the master server.
 sys-cluster/moosefs:metalogger - Install the metadata backup logger.
 sys-cluster/moosefs:netdump - Need to document.
 sys-cluster/moosefs:supervisor - Need to document.
-sys-process/systemd-cron:cron-boot - Include support for the boot timer.
-sys-process/systemd-cron:etc-crontab-systemd - Use dedicated /etc/crontab-systemd instead of parsing /etc/crontab
-sys-process/systemd-cron:minutely - Support /etc/cron.minutely
-sys-process/systemd-cron:runparts - Use traditional run-parts instead of creating jobs for each cron.* entry
-sys-process/systemd-cron:setgid - Compile setgid C helper for crontab. Needs GCC or Clang.
-sys-process/systemd-cron:yearly - Support /etc/cron.yearly
